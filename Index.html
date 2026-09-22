@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uma Carta Para Você ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Nunito:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Reprodutor de Música de Fundo -->
+  <div class="music-player">
+    <button id="musicToggleBtn" class="music-btn" title="Tocar / Pausar Música">🎵</button>
+    <audio id="bgMusic" loop>
+      <!-- Substitua o src pela URL ou arquivo local da música preferida de vocês -->
+      <source src="sua-musica.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <main class="page-container">
+    
+    <!-- Mídia Flutuante 1 (Esquerda Superior) -->
+    <div class="floating-media media-left-top">
+      <div class="tape tape-top-left"></div>
+      <div class="media-card">
+        <!-- Substitua src pela sua foto -->
+        <img src="midias/Primeiro encontro.jpeg" alt="Nossos momentos">
+        <p class="caption">Nosso primeiro Encontro</p>
+      </div>
+    </div>
+
+    <!-- Mídia Flutuante 2 (Direita Superior) -->
+    <div class="floating-media media-right-top">
+      <div class="heart-pin">❤️</div>
+      <div class="media-card">
+        <!-- Vídeo ou Foto da sua escolha -->
+        <video controls poster="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=600&q=80">
+          <source src="/midias/os Melhores rissos.mp4" type="video/mp4">
+        </video>
+        <p class="caption">Os Melhores Risos com você 🎥</p>
+      </div>
+    </div>
+
+    <!-- CARTA PRINCIPAL NO CENTRO -->
+    <article class="letter-container">
+      <header class="letter-header">
+        <span class="heart-icon">💖</span>
+        <h1>Para o Meu Grande Amor</h1>
+        <div class="date-tag">22 de Julho de 2026</div>
+      </header>
+
+      <section class="letter-content">
+        <p>Meu amor,</p>
+        <p>To escrevendo essa carta como forma de retribuir aquela que ganhei, é minha primeira carta, então espero que goste, quero deixar registrado o quanto você transforma a minha vida todos os dias. que estar ao seu lado torna cada instante mais leve, bonito e cheio de vida.</p>
+        <p>Desde aquele momento em que você falou que ia pensar, no instante que a gente se beijou, no momento em que tomamos a decisão de caminharmos juntos, aprendo diariamente o verdadeiro significado de amor, de querer cuidar, de um carinho sincero, de um abraço que me conforta.</p>
+        <p>Obrigado por cada gargalhada que você me faz dar, por todos os beijos e abraços apertado em cada momento, por ser essa pessoa simplesmente maravilhosa. Nunca me imaginei com alguém, mas você me mudou, mal posso esperar para vivermos ainda mais alegrias e risos, construir uma história inteira lado a lado.</p>
+        <p>Te amo infinitamente, você não é somente incrível </p>
+        <p>VOCÊ É INESTIMÁVEL</p>
+      </section>
+
+      <!-- Contador de Tempo de Namoro -->
+      <section class="counter-box">
+        <h3>Estamos juntos a:</h3>
+        <div class="timer" id="timer">
+          <div class="time-block"><span id="days">0</span><label>Dias</label></div>
+          <div class="time-block"><span id="hours">0</span><label>Horas</label></div>
+          <div class="time-block"><span id="minutes">0</span><label>Min</label></div>
+          <div class="time-block"><span id="seconds">0</span><label>Seg</label></div>
+        </div>
+      </section>
+
+      <footer class="letter-footer">
+        <button id="surpriseBtn" class="heart-button">Clique aqui para uma surpresa! ✨</button>
+      </footer>
+    </article>
+
+    <!-- Mídia Flutuante 3 (Esquerda Inferior) -->
+    <div class="floating-media media-left-bottom">
+      <div class="heart-pin">💖</div>
+      <div class="media-card">
+        <!-- Substitua src pela sua foto -->
+        <img src="/midias/pedido.jpeg" alt="Sorrisos juntos">
+        <p class="caption">Seu sorriso lindo e um dos dias mais felizes para nós dois</p>
+      </div>
+    </div>
+
+    <!-- Mídia Flutuante 4 (Direita Inferior) -->
+    <div class="floating-media media-right-bottom">
+      <div class="tape tape-top-right"></div>
+      <div class="media-card">
+        <!-- Vídeo ou Foto da sua escolha -->
+        <video controls poster="https://images.unsplash.com/photo-1494774157365-9e04c6720e47?auto=format&fit=crop&w=600&q=80">
+          <source src="/midias/video 2.mp4" type="video/mp4">
+        </video>
+        <p class="caption">Lembranças diarias com você</p>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Galeria Extra de Fotos e Vídeos -->
+  <section class="extra-gallery-section">
+    <h2 class="gallery-title">Mais Momentos Especiais 📸</h2>
+    <div class="gallery-grid">
+      
+      <div class="gallery-item">
+        <div class="tape tape-top-center"></div>
+        <img src="/midias/img 1.jpeg" alt="Foto Extra 1">
+        <p class="caption">mais momentos ✨</p>
+      </div>
+            <div class="gallery-item">
+        <div class="tape tape-top-center"></div>
+        <img src="/midias/img 2.jpeg" alt="Foto Extra 1">
+        <p class="caption">mais momentos ✨</p>
+      </div>
+            <div class="gallery-item">
+        <div class="tape tape-top-center"></div>
+        <img src="/midias/img 3.jpeg" alt="Foto Extra 1">
+        <p class="caption">mais momentos ✨</p>
+      </div>
+            <div class="gallery-item">
+        <div class="tape tape-top-center"></div>
+        <img src="/midias/img 4.jpeg" alt="Foto Extra 1">
+        <p class="caption">mais momentos ✨</p>
+      </div>
+
+      <div class="gallery-item">
+        <div class="heart-pin">💕</div>
+        <video controls poster="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=600&q=80">
+          <source src="/midias/video 1.mp4" type="video/mp4">
+        </video>
+        <p class="caption">Aquele dia divertido 🎬</p>
+      </div>
+
+      <div class="gallery-item">
+        <div class="tape tape-top-center"></div>
+        <img src="/midias/img 5.jpeg" alt="Foto Extra 2">
+        <p class="caption">Sempre ao seu lado 💖</p>
+      </div>
+         <div class="gallery-item">
+        <div class="tape tape-top-center"></div>
+        <img src="/midias/WhatsApp Image 2026-09-22 at 00.41.06.jpeg" alt="Foto Extra 2">
+        <p class="caption">Sempre ao seu lado 💖</p>
+      </div>
+
+         <div class="gallery-item">
+        <div class="tape tape-top-center"></div>
+        <img src="/midias/WhatsApp Image 2026-09-22 at 00.41.05 (1).jpeg" alt="Foto Extra 2">
+        <p class="caption">Sempre ao seu lado 💖</p>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- Script da Página -->
+  <script>
+    // Configuração do Contador de Namoro (22/07/2026)
+    const startDate = new Date('2026-07-22T00:00:00');
+
+    function updateCounter() {
+      const now = new Date();
+      let diff = now - startDate;
+
+      if (diff < 0) {
+        // Caso a data ainda esteja no futuro
+        diff = Math.abs(diff);
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      document.getElementById('days').innerText = days;
+      document.getElementById('hours').innerText = hours;
+      document.getElementById('minutes').innerText = minutes;
+      document.getElementById('seconds').innerText = seconds;
+    }
+
+    setInterval(updateCounter, 1000);
+    updateCounter();
+
+    // Controle de Música
+    const musicBtn = document.getElementById('musicToggleBtn');
+    const bgMusic = document.getElementById('bgMusic');
+    let isPlaying = false;
+
+    musicBtn.addEventListener('click', () => {
+      if (isPlaying) {
+        bgMusic.pause();
+        musicBtn.innerText = '🎵';
+      } else {
+        bgMusic.play().catch(() => {});
+        musicBtn.innerText = '🔊';
+      }
+      isPlaying = !isPlaying;
+    });
+
+    // Animação de Corações Flutuantes ao Clicar
+    function createHeart(x, y) {
+      const heart = document.createElement('div');
+      heart.className = 'floating-heart-click';
+      heart.innerText = ['❤️', '💖', '💕', '🌸', '✨'][Math.floor(Math.random() * 5)];
+      heart.style.left = `${x}px`;
+      heart.style.top = `${y}px`;
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 1500);
+    }
+
+    document.addEventListener('click', (e) => {
+      // Ignora cliques no player de áudio ou botões para evitar obstrução
+      if (!e.target.closest('button') && !e.target.closest('video')) {
+        createHeart(e.clientX, e.clientY);
+      }
+    });
+
+    // Botão Surpresa
+    document.getElementById('surpriseBtn').addEventListener('click', (e) => {
+      e.stopPropagation();
+      for (let i = 0; i < 25; i++) {
+        setTimeout(() => {
+          const x = Math.random() * window.innerWidth;
+          const y = Math.random() * window.innerHeight;
+          createHeart(x, y);
+        }, i * 60);
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,369 @@
+:root {
+  --bg-color: #fce4ec;
+  --paper-color: #fffaf0;
+  --text-color: #4a3e3d;
+  --accent-color: #e91e63;
+  --accent-soft: #f48fb1;
+  --shadow-color: rgba(186, 104, 200, 0.15);
+  --border-radius: 18px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  background-image: radial-gradient(#f8bbd0 1px, transparent 1px);
+  background-size: 24px 24px;
+  font-family: 'Nunito', sans-serif;
+  color: var(--text-color);
+  padding: 40px 15px;
+  overflow-x: hidden;
+}
+
+/* Reprodutor de Música Flutuante */
+.music-player {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+}
+
+.music-btn {
+  background: #ffffff;
+  border: 2px solid var(--accent-soft);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s, background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.music-btn:hover {
+  transform: scale(1.1);
+  background-color: #fff0f5;
+}
+
+/* Layout Principal */
+.page-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+}
+
+/* Carta Central */
+.letter-container {
+  background-color: var(--paper-color);
+  width: 100%;
+  max-width: 520px;
+  padding: 45px 35px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 10px 30px var(--shadow-color), 0 0 0 1px rgba(233, 30, 99, 0.08);
+  border: 2px dashed #f8bbd0;
+  position: relative;
+  z-index: 2;
+  margin: 40px 0;
+}
+
+.letter-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.letter-header .heart-icon {
+  font-size: 32px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.letter-header h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.2rem;
+  color: var(--accent-color);
+}
+
+.date-tag {
+  font-size: 0.85rem;
+  color: #ad1457;
+  font-weight: 700;
+  background-color: #f8bbd0;
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: 12px;
+  margin-top: 6px;
+}
+
+.letter-content {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #5d4037;
+}
+
+.letter-content p {
+  margin-bottom: 16px;
+  text-indent: 15px;
+}
+
+/* Contador de Tempo */
+.counter-box {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px dashed #f48fb1;
+  text-align: center;
+}
+
+.counter-box h3 {
+  font-size: 0.95rem;
+  color: #880e4f;
+  margin-bottom: 12px;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.time-block {
+  background: #ffffff;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid #f8bbd0;
+  min-width: 60px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+
+.time-block span {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+.time-block label {
+  font-size: 0.7rem;
+  color: #880e4f;
+  text-transform: uppercase;
+}
+
+.letter-footer {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.heart-button {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(233, 30, 99, 0.3);
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.heart-button:hover {
+  background-color: #c2185b;
+  transform: translateY(-2px);
+}
+
+/* Cartões Mídia Flutuante (Formato Polaroid e Vídeos) */
+.floating-media {
+  position: absolute;
+  z-index: 3;
+}
+
+.media-card {
+  background: white;
+  padding: 10px 10px 15px 10px;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  width: 210px;
+  text-align: center;
+}
+
+.media-card img, 
+.media-card video {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.caption {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.1rem;
+  margin-top: 8px;
+  color: #4e342e;
+}
+
+/* Posicionamento Intercalado (Lateral Esquerda e Direita) */
+.media-left-top {
+  top: 40px;
+  left: 20px;
+  transform: rotate(-6deg);
+}
+
+.media-right-top {
+  top: 120px;
+  right: 20px;
+  transform: rotate(7deg);
+}
+
+.media-left-bottom {
+  bottom: 80px;
+  left: 30px;
+  transform: rotate(5deg);
+}
+
+.media-right-bottom {
+  bottom: 40px;
+  right: 30px;
+  transform: rotate(-8deg);
+}
+
+/* Elementos Decorativos */
+.tape {
+  position: absolute;
+  width: 80px;
+  height: 25px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px dashed rgba(0, 0, 0, 0.1);
+  z-index: 4;
+}
+
+.tape-top-left {
+  top: -10px;
+  left: -20px;
+  transform: rotate(-25deg);
+}
+
+.tape-top-right {
+  top: -10px;
+  right: -20px;
+  transform: rotate(25deg);
+}
+
+.tape-top-center {
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-3deg);
+}
+
+.heart-pin {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  z-index: 4;
+  filter: drop-shadow(0 2px 3px rgba(0,0,0,0.2));
+}
+
+/* Galeria Extra */
+.extra-gallery-section {
+  max-width: 900px;
+  margin: 60px auto 20px auto;
+  text-align: center;
+}
+
+.gallery-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.2rem;
+  color: var(--accent-color);
+  margin-bottom: 30px;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.gallery-item {
+  background: white;
+  padding: 12px 12px 18px 12px;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  width: 240px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px) rotate(1deg);
+}
+
+.gallery-item img,
+.gallery-item video {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Animação de Coração ao Clicar */
+.floating-heart-click {
+  position: fixed;
+  font-size: 24px;
+  pointer-events: none;
+  animation: floatUp 1.5s ease-out forwards;
+  z-index: 999;
+}
+
+@keyframes floatUp {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -150px) scale(1.4);
+  }
+}
+
+/* Responsividade para Telas Menores (Celulares) */
+@media (max-width: 850px) {
+  .page-container {
+    flex-direction: column;
+  }
+
+  .floating-media {
+    position: relative;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    margin: 15px 0;
+  }
+
+  .media-card {
+    width: 280px;
+  }
+
+  .media-card img,
+  .media-card video {
+    height: 220px;
+  }
+
+  .letter-container {
+    margin: 20px 0;
+    padding: 30px 20px;
+  }
+}
