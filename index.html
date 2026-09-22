@@ -15,8 +15,7 @@
   <div class="music-player">
     <button id="musicToggleBtn" class="music-btn" title="Tocar / Pausar Música">🎵</button>
     <audio id="bgMusic" loop>
-      <!-- Substitua o src pela URL ou arquivo local da música preferida de vocês -->
-      <source src="sua-musica.mp3" type="audio/mpeg">
+      <source src="midias/sua-musica.mp3" type="audio/mpeg">
     </audio>
   </div>
 
@@ -26,7 +25,6 @@
     <div class="floating-media media-left-top">
       <div class="tape tape-top-left"></div>
       <div class="media-card">
-        <!-- Substitua src pela sua foto -->
         <img src="midias/Primeiro encontro.jpeg" alt="Nossos momentos">
         <p class="caption">Nosso primeiro Encontro</p>
       </div>
@@ -36,9 +34,8 @@
     <div class="floating-media media-right-top">
       <div class="heart-pin">❤️</div>
       <div class="media-card">
-        <!-- Vídeo ou Foto da sua escolha -->
         <video controls poster="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=600&q=80">
-          <source src="/midias/os Melhores rissos.mp4" type="video/mp4">
+          <source src="midias/os Melhores rissos.mp4" type="video/mp4">
         </video>
         <p class="caption">Os Melhores Risos com você 🎥</p>
       </div>
@@ -81,8 +78,7 @@
     <div class="floating-media media-left-bottom">
       <div class="heart-pin">💖</div>
       <div class="media-card">
-        <!-- Substitua src pela sua foto -->
-        <img src="/midias/pedido.jpeg" alt="Sorrisos juntos">
+        <img src="midias/pedido.jpeg" alt="Sorrisos juntos">
         <p class="caption">Seu sorriso lindo e um dos dias mais felizes para nós dois</p>
       </div>
     </div>
@@ -91,9 +87,8 @@
     <div class="floating-media media-right-bottom">
       <div class="tape tape-top-right"></div>
       <div class="media-card">
-        <!-- Vídeo ou Foto da sua escolha -->
         <video controls poster="https://images.unsplash.com/photo-1494774157365-9e04c6720e47?auto=format&fit=crop&w=600&q=80">
-          <source src="/midias/video 2.mp4" type="video/mp4">
+          <source src="midias/video 2.mp4" type="video/mp4">
         </video>
         <p class="caption">Lembranças diarias com você</p>
       </div>
@@ -108,50 +103,53 @@
       
       <div class="gallery-item">
         <div class="tape tape-top-center"></div>
-        <img src="/midias/img 1.jpeg" alt="Foto Extra 1">
+        <img src="midias/img 1.jpeg" alt="Foto Extra 1">
         <p class="caption">mais momentos ✨</p>
       </div>
-            <div class="gallery-item">
+
+      <div class="gallery-item">
         <div class="tape tape-top-center"></div>
-        <img src="/midias/img 2.jpeg" alt="Foto Extra 1">
+        <img src="midias/img 2.jpeg" alt="Foto Extra 2">
         <p class="caption">mais momentos ✨</p>
       </div>
-            <div class="gallery-item">
+
+      <div class="gallery-item">
         <div class="tape tape-top-center"></div>
-        <img src="/midias/img 3.jpeg" alt="Foto Extra 1">
+        <img src="midias/img 3.jpeg" alt="Foto Extra 3">
         <p class="caption">mais momentos ✨</p>
       </div>
-            <div class="gallery-item">
+
+      <div class="gallery-item">
         <div class="tape tape-top-center"></div>
-        <img src="/midias/img 4.jpeg" alt="Foto Extra 1">
+        <img src="midias/img 4.jpeg" alt="Foto Extra 4">
         <p class="caption">mais momentos ✨</p>
       </div>
 
       <div class="gallery-item">
         <div class="heart-pin">💕</div>
         <video controls poster="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=600&q=80">
-          <source src="/midias/video 1.mp4" type="video/mp4">
+          <source src="midias/video 1.mp4" type="video/mp4">
         </video>
         <p class="caption">Aquele dia divertido 🎬</p>
       </div>
 
       <div class="gallery-item">
         <div class="tape tape-top-center"></div>
-        <img src="/midias/img 5.jpeg" alt="Foto Extra 2">
-        <p class="caption">Sempre ao seu lado 💖</p>
-      </div>
-         <div class="gallery-item">
-        <div class="tape tape-top-center"></div>
-        <img src="/midias/WhatsApp Image 2026-09-22 at 00.41.06.jpeg" alt="Foto Extra 2">
+        <img src="midias/img 5.jpeg" alt="Foto Extra 5">
         <p class="caption">Sempre ao seu lado 💖</p>
       </div>
 
-         <div class="gallery-item">
+      <div class="gallery-item">
         <div class="tape tape-top-center"></div>
-        <img src="/midias/WhatsApp Image 2026-09-22 at 00.41.05 (1).jpeg" alt="Foto Extra 2">
+        <img src="midias/WhatsApp Image 2026-09-22 at 00.41.06.jpeg" alt="Foto Extra 6">
         <p class="caption">Sempre ao seu lado 💖</p>
       </div>
 
+      <div class="gallery-item">
+        <div class="tape tape-top-center"></div>
+        <img src="midias/WhatsApp Image 2026-09-22 at 00.41.05 (1).jpeg" alt="Foto Extra 7">
+        <p class="caption">Sempre ao seu lado 💖</p>
+      </div>
 
     </div>
   </section>
@@ -166,7 +164,6 @@
       let diff = now - startDate;
 
       if (diff < 0) {
-        // Caso a data ainda esteja no futuro
         diff = Math.abs(diff);
       }
 
@@ -215,7 +212,6 @@
     }
 
     document.addEventListener('click', (e) => {
-      // Ignora cliques no player de áudio ou botões para evitar obstrução
       if (!e.target.closest('button') && !e.target.closest('video')) {
         createHeart(e.clientX, e.clientY);
       }
